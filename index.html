@@ -7,34 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>P4CSS Education Sites</title>
 </head>
+<style>
+    .align-bottom-left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .align-bottom-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+</style>
 
 <body>
-    <div style="height:50vh;background:greenyellow">
-        <div class="container d-flex h-100">
-            <div class="row align-self-end">
-                <h1
-                    style="font-family: 'Noto Sans', sans-serif;font-size:10vh;color:white;text-shadow:2px 1px 4px gray;">
-                    P4CSS Education Sites</h1>
-            </div>
+
+    <div class="row">
+        <div class="col-md-4" style="position:relative;color:MediumOrchid">
+            <p class="align-bottom-right">Programming for Computational Social Science -> </p>
         </div>
-        <div class="container">
-            <div class="row">
-                <dl>
-                    <dt>Instructor</dt>
-                    <dd>Ji-Lung Hsieh, Associate Professor<br>Graduate Institute of Journalism, National Taiwan
-                        University</dd>
-                    <dt>Course</dt>
-                    <dd>110-1 (2021-Fall) <a href="https://github.com/P4CSS/PSS">Programming for Social Scientist
-                            (PSS)</a></dd>
-                    <dd>110-1 (2021-Fall) <a href="https://p4css.github.io/webScroll/">Web storytelling</a></dd>
-                </dl>
+        <div class="col-md-8" style="position:relative;background:greenyellow;border-radius:5px;height:50vh">
+            <div class="align-bottom-left">
+                <h1 style="font-size:10vh">P4CSS</h1>
+                <h2>Programming Tutorials</h2>
             </div>
         </div>
     </div>
+
+    <div class="row" style="margin-top:3vh">
+        <div class="col-md-4" style="position:relative;color:MediumOrchid">
+            <p style="position:absolute;right:0px;">Current courses -> </p>
+        </div>
+        <div class="col-md-8">
+            <dl>
+                <dt>Instructor</dt>
+                <dd>Ji-Lung Hsieh, Associate Professor<br>Graduate Institute of Journalism, National Taiwan
+                    University</dd>
+                <dt>Course</dt>
+                <dd>110-1 (2021-Fall) <a href="https://github.com/P4CSS/PSS">Programming for Social Scientist
+                        (PSS)</a></dd>
+                <dd>110-1 (2021-Fall) <a href="https://p4css.github.io/webScroll/">Web storytelling</a></dd>
+            </dl>
+        </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
