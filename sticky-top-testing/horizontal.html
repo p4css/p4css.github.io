@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sticky Top Testing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <img src="gojo.webp" alt="gojo" style="height:50vh;position:fixed;left:50vw;top:50px;transform: translateX(-50%);">
+    <div class="row" style="height:1000vh">
+        <div class="sticky-top col-6" style="height:100vh;overflow:hidden;">
+            <div id="horizon1" style="height:100vh;width:300vw;position:absolute;left:-200vw">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;right:160vw;top:50px;opacity:1">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;right:170vw;top:50px;opacity:0.9">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;right:180vw;top:50px;opacity:0.8">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;right:190vw;top:50px;opacity:0.7">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;right:200vw;top:50px;opacity:0.6">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;right:210vw;top:50px;opacity:0.5">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;right:220vw;top:50px;opacity:0.4">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;right:230vw;top:50px;opacity:0.3">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;right:240vw;top:50px;opacity:0.2">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;right:250vw;top:50px;opacity:0.1">
+            </div>
+        </div>
+        <div class="sticky-top col-6" style="height:100vh;overflow:hidden;">
+            <div id="horizon2" style="height:100vh;width:300vw;position:absolute;left:0">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;left:200vw;top:50px;opacity:0.1">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;left:190vw;top:50px;opacity:0.2">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;left:180vw;top:50px;opacity:0.3">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;left:170vw;top:50px;opacity:0.4">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;left:160vw;top:50px;opacity:0.5">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;left:150vw;top:50px;opacity:0.6">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;left:140vw;top:50px;opacity:0.7">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;left:130vw;top:50px;opacity:0.8">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;left:120vw;top:50px;opacity:0.9">
+                <img src="gojo.webp" alt="gojo" style="height:50vh;position:absolute;left:110vw;top:50px;opacity:1.0">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var max_scroll = $(document).height();
+            console.log(max_scroll);
+            console.log($(document).height());
+            console.log("win height:"+$(window).height());
+            var max_w = $("#horizon1").width() - $(window).width();
+            // console.log(max_w);
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop();
+                var new_left = scroll / max_scroll * max_w;
+                console.log(new_left);
+                $("#horizon1").css("left", -max_w + new_left);
+                $("#horizon2").css("left", -1*new_left);
+            })
+        });
+    </script>
+
+
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
